@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a2e">
+
+    <LinearLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:background="#1a1a2e">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="Logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accedi al tuo account"
+            android:textColor="#aaaacc"
+            android:textSize="14sp"
+            android:layout_marginBottom="32dp" />
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Username"
+            android:textColorHint="#888"
+            android:textColor="#ffffff"
+            android:background="@drawable/input_bg"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Password"
+            android:textColorHint="#888"
+            android:textColor="#ffffff"
+            android:background="@drawable/input_bg"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/cbRemember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ricordami"
+            android:textColor="#aaaacc"
+            android:buttonTint="#4e9af1"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="ACCEDI"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/btn_bg"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/webLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="top"
+            android:max="100"
+            android:progressTint="#4e9af1"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvCloudflare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#cc000000"
+            android:padding="14dp"
+            android:text="Verifica di sicurezza richiesta - spunta il riquadro per continuare. Verra chiesta solo la prima volta."
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</FrameLayout>
